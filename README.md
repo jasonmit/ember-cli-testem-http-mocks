@@ -3,7 +3,7 @@
 [http-mocks](http://ember-cli.com/user-guide/#mocks-and-fixtures) currently are not hooked up on the express server that is instantiated as part of `ember test`.
 
 There have been a number of attempts to land this and those can be tracked here:
-https://github.com/ember-cli/ember-cli/issues/1763
+[ember-cli/#1763](https://github.com/ember-cli/ember-cli/issues/1763)
 
 Until the core issue is fixed, this addon works around the issue -- allowing mocks to be registered against the testem server.
 
