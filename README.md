@@ -1,6 +1,6 @@
 # ember-cli-testem-http-mocks
 
-(http-mocks)[http://ember-cli.com/user-guide/#mocks-and-fixtures] currently are not hooked up on the express server that is instantiated as part of `ember test`.
+[http-mocks](http://ember-cli.com/user-guide/#mocks-and-fixtures) currently are not hooked up on the express server that is instantiated as part of `ember test`.
 
 There have been a number of attempts to land this and those can be tracked here:
 https://github.com/ember-cli/ember-cli/issues/1763
