@@ -9,7 +9,11 @@
 //   });
 // };
 
+var isDisabled = require('ember-cli-testem-http-mocks/lib/is-disabled');
+
 module.exports = function(app) {
+  if (isDisabled()) { return; }
+
   var globSync = require('glob').sync;
   var mocks = globSync('./server/mocks/**/*.js', { cwd: __dirname }).map(require);
 

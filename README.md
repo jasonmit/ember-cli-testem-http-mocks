@@ -2,12 +2,16 @@
 
 ## Why?
 
-http-mocks currently are not on express server that is instantiated as part of `ember test`.
+http-mocks currently are not hooked up on the express server that is instantiated as part of `ember test`.
 
 There have been a number of attempts to land this and those can be tracked here:
 https://github.com/ember-cli/ember-cli/issues/1763
 
-Until this is fixed, this addon will serve as a monkey-patch allowing mocks to be available on the testem express server.
+Until the core issue is fixed, this addon works around the issue -- making registering the mocks against the testem server.
+
+## Disable
+
+`DISABLE_MOCKS=true ember test`
 
 ## Installation
 
