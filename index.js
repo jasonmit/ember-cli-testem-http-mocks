@@ -4,17 +4,13 @@
 var path = require('path');
 var existsSync = require('exists-sync');
 
+var isDisabled = require('./lib/is-disabled');
+
 module.exports = {
   name: 'ember-cli-testem-http-mocks',
 
-  isDisabled: function() {
-    var disabled = process.env['DISABLE_MOCKS'];
-
-    return typeof disabled === 'string' && disabled.toLowerCase() === 'true';
-  },
-
   testemMiddleware: function(app) {
-    if (this.isDisabled()) {
+    if (isDisabled()) {
       return;
     }
 
