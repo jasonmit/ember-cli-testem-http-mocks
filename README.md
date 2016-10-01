@@ -7,15 +7,14 @@ There have been a number of attempts to land this and those can be tracked here:
 
 Until the core issue is fixed, this addon works around the feature/bug by allowing mocks to be registered against the testem server.
 
+## Installation
+
+* `ember install ember-cli-testem-http-mocks`
+* `ember g http-mock /api` (create a mock if one is not already created)
+
 ## Disable
 
 `DISABLE_MOCKS=true ember test`
-
-## Installation
-
-* `git clone` this repository
-* `npm install`
-* `bower install`
 
 ## Running
 
