@@ -1,7 +1,7 @@
 /*jshint node:true*/
 
-var mocksAddon = require('ember-cli-testem-http-mocks');
 var globSync = require('glob').sync;
+var isDisabled = require('ember-cli-testem-http-mocks/lib/is-disabled');
 
 // To use it create some files under `mocks/`
 // e.g. `server/mocks/ember-hamsters.js`
@@ -12,7 +12,7 @@ var globSync = require('glob').sync;
 //   });
 // };
 function setupMocks(app) {
-  if (mocksAddon.isDisabled()) { return; }
+  if (isDisabled()) { return; }
 
   var mocks = globSync('./mocks/**/*.js', { cwd: __dirname }).map(require);
 
